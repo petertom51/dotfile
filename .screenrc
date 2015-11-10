@@ -1,0 +1,96 @@
+#disable startup message
+startup_message off
+
+term "xterm-256color"
+
+defscrollback 50000
+
+
+# add hardstatus
+#caption always "%{=u .r} %-w%<%{=ub .Y}%n %t%{=u .r}%+w "
+#caption always "%{= wk} %{= KY} [%n] %t@%H %{-} %= %{= KR} %l %{-} | %{= KG} %Y-%m-%d %{-} "
+hardstatus alwaysignore
+#hardstatus alwayslastline "%{= .K} [%l]%<%=%{= .R}@%H %=%{= .m} %Y/%m/%d%{= .M} %0c "
+hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %0c:%s "
+#termcapinfo xterm*|rxvt* 'ti@:te@'
+#termcapinfo xterm ti@:te@
+
+# avoid tab cuase screen flash
+vbell "off"
+
+# default UTF-8
+defutf8 on
+defencoding UTF-8
+encoding UTF-8 UTF-8
+
+# Support alternate screens so that, for example, when you 
+# quit out of vi, the display is redrawn as it was before vi
+# redrew the full screen.
+altscreen on
+
+# Start a number of initial shells and give them titles which show up in the status-line
+#screen -t Code    0 bash
+#screen -t Testing 1 bash
+
+# HotKey
+
+bindkey -k k7 eval "copy" "stuff ^b"
+bindkey -k k8 eval "copy" "stuff ^f"
+
+#
+#
+## Alt + r : clear top screen ( C-a c)
+bindkey "^[r" clear
+
+## Alt + s : get into copy/scroll mode ( C-a esc )
+bindkey "^[s" copy
+
+## Alt + h : working at background (C-a d)
+bindkey "^[h" detach
+
+## Alt + i : display all screen ( C-a * )
+bindkey "^[i" displays
+
+## Alt + d : close top screen ( C-a k)
+bindkey "^[d" kill
+
+# Alt + l : lock up the screen ( C-a C-x )
+bindkey "^[l" lockscreen
+
+# Alt + j : switch to next screen ( C-a n )
+bindkey "^[j" next
+
+## Alt + k : switch to prev screen ( C-a p )
+bindkey "^[k" prev 
+
+# Alt + w : close now split area ( C-a X )
+bindkey "^[w" remove
+
+# Alt + t : add new screen ( C-a c)
+bindkey "^[t" screen
+
+# Alt + o : split screen horizatal ( C-a S )
+bindkey "^[o" split
+
+# F2 : change the screen title ( C-a A )
+bindkey -k k2 title
+
+# Alt + `/= : switch to specific screen num
+bindkey "^[`" select 0
+bindkey "^[1" select 1
+bindkey "^[2" select 2
+bindkey "^[3" select 3
+bindkey "^[4" select 4
+bindkey "^[5" select 5
+bindkey "^[6" select 6
+bindkey "^[7" select 7
+bindkey "^[8" select 8
+bindkey "^[9" select 9
+bindkey "^[0" select 10
+bindkey "^[-" select 11
+bindkey "^[=" select 12
+
+# Let gnu-screen supports 256 colors
+attrcolor b ".I"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce "on"

@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/shawn/EMS/pilot3_20140911/platform/pilot3/evb/pilot3_evb_build/apps/ipmi'
+let g:netrw_dirhist_2='/home/shawn/EMS/pilot3_20140909/platform/pilot3/evb/pilot3_evb_build/apps/logging/logging'
+let g:netrw_dirhist_3='/home/shawn/EMS/pilot3_20140911/platform/pilot3/evb/pilot3_evb_build/apps/sdr/sdr'
+let g:netrw_dirhist_4='/home/shawn/EMS/pilot3_20140909/platform/pilot3/evb/pilot3_evb_build/apps/lock/edmlock'
+let g:netrw_dirhist_5='/home/shawn/EMS/pilot3_20140909/platform/pilot3/evb/pilot3_evb_build/apps/securitymgr/securitymgr/m4'
+let g:netrw_dirhist_6='/home/shawn/EMS/pilot3_20140911/platform/pilot3/evb/pilot3_evb_build/apps/sdr/sdr'
