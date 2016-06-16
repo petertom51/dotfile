@@ -132,3 +132,7 @@ LANG=en_US
 
 # Set umask
 umask 002
+
+# Set ls colors
+# reference: http://askubuntu.com/questions/466198/how-do-i-change-the-color-for-directories-with-ls-in-the-console
+export LS_COLORS='di=1;94:ex=92:or=1;31:ln=96'
